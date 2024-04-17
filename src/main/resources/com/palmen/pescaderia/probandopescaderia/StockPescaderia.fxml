@@ -2,85 +2,106 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane fx:id="panelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="948.0" style="-fx-background-color: #E7F8FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.pescaderia.probandopescaderia.controllers.StockController">
-   <children>
-      <Pane fx:id="panelInfo" prefHeight="632.0" prefWidth="205.0" style="-fx-background-color: #328496;" />
-      <Button fx:id="btnUsuario" layoutX="219.0" layoutY="14.0" mnemonicParsing="false" text="USUARIO" />
-      <Label fx:id="lblBacalao" layoutX="287.0" layoutY="95.0" text="BACALAO" />
-      <Label fx:id="lblBoqueron" layoutX="458.0" layoutY="95.0" text="BOQUERON" />
-      <Label fx:id="lblDorada" layoutX="644.0" layoutY="95.0" text="DORADA" />
-      <Label fx:id="lblGamba" layoutX="825.0" layoutY="95.0" text="GAMBA" />
-      <Label fx:id="lblLenguado" layoutX="282.0" layoutY="258.0" text="LENGUADO" />
-      <Label fx:id="lblLubina" layoutX="470.0" layoutY="259.0" text="LUBINA" />
-      <Label fx:id="lblMerluza" layoutX="642.0" layoutY="259.0" text="MERLUZA" />
-      <Label fx:id="lblPulpo" layoutX="827.0" layoutY="258.0" text="PULPO" />
-      <Label fx:id="lblSalmon" layoutX="289.0" layoutY="435.0" text="SALMON" />
-      <Label fx:id="lblSardina" layoutX="467.0" layoutY="435.0" text="SARDINA" />
-      <Label fx:id="lblSepia" layoutX="653.0" layoutY="435.0" text="SEPIA" />
-      <Label fx:id="lblTrucha" layoutX="822.0" layoutY="435.0" text="TRUCHA" />
-      <ImageView fx:id="imgBacalao" fitHeight="143.0" fitWidth="174.0" layoutX="216.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/bacalao.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgBoqueron" fitHeight="114.0" fitWidth="168.0" layoutX="406.0" layoutY="122.0">
-         <image>
-            <Image url="@../../../../img/boqueron.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgDorada" fitHeight="108.0" fitWidth="168.0" layoutX="584.0" layoutY="125.0">
-         <image>
-            <Image url="@../../../../img/dorada.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgGamba" fitHeight="150.0" fitWidth="200.0" layoutX="752.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/gamba.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgLenguado" fitHeight="114.0" fitWidth="174.0" layoutX="226.0" layoutY="275.0">
-         <image>
-            <Image url="@../../../../img/lenguado.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgLubina" fitHeight="98.0" fitWidth="184.0" layoutX="400.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/lubina.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgMerluza" fitHeight="133.0" fitWidth="191.0" layoutX="588.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/merluza.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgPulpo" fitHeight="150.0" fitWidth="200.0" layoutX="745.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/pulpo.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgSalmon" fitHeight="123.0" fitWidth="174.0" layoutX="226.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/salmon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgSardina" fitHeight="122.0" fitWidth="174.0" layoutX="405.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/sardina.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgSepia" fitHeight="123.0" fitWidth="168.0" layoutX="584.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/sepia.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgTrucha" fitHeight="112.0" fitWidth="174.0" layoutX="762.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../img/trucha.png" />
-         </image>
-      </ImageView>
-   </children>
+<Pane fx:id="panelPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="948.0" style="-fx-background-color: #E7F8FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.pescaderia.probandopescaderia.StockController">
+    <children>
+        <Pane fx:id="panelInfo" prefHeight="632.0" prefWidth="205.0" style="-fx-background-color: #328496;">
+            <children>
+                <ImageView fx:id="imgUsuarioLogo" fitHeight="98.0" fitWidth="123.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../img/iconoUsuario.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="lblUsuarioLogo" layoutX="54.0" layoutY="112.0" prefHeight="17.0" prefWidth="114.0" text="Nombre de usuario" />
+                <Label layoutX="61.0" layoutY="253.0" text="INFO PESCADO" />
+                <Spinner fx:id="spinnerTemporal" layoutX="125.0" layoutY="364.0" prefHeight="25.0" prefWidth="53.0">
+                    <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory fx:id="mySpinnerValueFactory" amountToStepBy="1" initialValue="0" max="100" min="0" />
+                    </valueFactory>
+                </Spinner>
+            <Label layoutX="33.0" layoutY="368.0" text="AÑADIR" />
+            <Label layoutX="33.0" layoutY="436.0" text="ELIMINAR" />
+            <Spinner layoutX="126.0" layoutY="424.0" prefHeight="25.0" prefWidth="53.0" />
+            <Button layoutX="60.0" layoutY="502.0" mnemonicParsing="false" text="ACTUALIZAR" />
+            </children>
+        </Pane>
+        <Button fx:id="btnUsuario" layoutX="219.0" layoutY="14.0" mnemonicParsing="false" text="USUARIO" />
+        <Label fx:id="lblBacalao" layoutX="287.0" layoutY="95.0" text="BACALAO" />
+        <Label fx:id="lblBoqueron" layoutX="458.0" layoutY="95.0" text="BOQUERON" />
+        <Label fx:id="lblDorada" layoutX="644.0" layoutY="95.0" text="DORADA" />
+        <Label fx:id="lblGamba" layoutX="825.0" layoutY="95.0" text="GAMBA" />
+        <Label fx:id="lblLenguado" layoutX="282.0" layoutY="258.0" text="LENGUADO" />
+        <Label fx:id="lblLubina" layoutX="470.0" layoutY="259.0" text="LUBINA" />
+        <Label fx:id="lblMerluza" layoutX="642.0" layoutY="259.0" text="MERLUZA" />
+        <Label fx:id="lblPulpo" layoutX="827.0" layoutY="258.0" text="PULPO" />
+        <Label fx:id="lblSalmon" layoutX="289.0" layoutY="435.0" text="SALMON" />
+        <Label fx:id="lblSardina" layoutX="467.0" layoutY="435.0" text="SARDINA" />
+        <Label fx:id="lblSepia" layoutX="653.0" layoutY="435.0" text="SEPIA" />
+        <Label fx:id="lblTrucha" layoutX="822.0" layoutY="435.0" text="TRUCHA" />
+        <ImageView fx:id="imgBacalao" fitHeight="143.0" fitWidth="174.0" layoutX="216.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/bacalao.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgBoqueron" fitHeight="114.0" fitWidth="168.0" layoutX="406.0" layoutY="122.0">
+            <image>
+                <Image url="@../../../../img/boqueron.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgDorada" fitHeight="108.0" fitWidth="168.0" layoutX="584.0" layoutY="125.0">
+            <image>
+                <Image url="@../../../../img/dorada.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgGamba" fitHeight="150.0" fitWidth="200.0" layoutX="752.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/gamba.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgLenguado" fitHeight="114.0" fitWidth="174.0" layoutX="226.0" layoutY="275.0">
+            <image>
+                <Image url="@../../../../img/lenguado.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgLubina" fitHeight="98.0" fitWidth="184.0" layoutX="400.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/lubina.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgMerluza" fitHeight="133.0" fitWidth="191.0" layoutX="588.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/merluza.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgPulpo" fitHeight="150.0" fitWidth="200.0" layoutX="745.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/pulpo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgSalmon" fitHeight="123.0" fitWidth="174.0" layoutX="226.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/salmon.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgSardina" fitHeight="122.0" fitWidth="174.0" layoutX="405.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/sardina.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgSepia" fitHeight="123.0" fitWidth="168.0" layoutX="584.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/sepia.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgTrucha" fitHeight="112.0" fitWidth="174.0" layoutX="762.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/trucha.png" />
+            </image>
+        </ImageView>
+    </children>
 </Pane>

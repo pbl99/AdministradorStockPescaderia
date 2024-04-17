@@ -1,4 +1,4 @@
-package com.palmen.pescaderia.probandopescaderia.controllers;
+package com.palmen.pescaderia.probandopescaderia;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

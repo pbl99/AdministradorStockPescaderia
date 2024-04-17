@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="registroPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.pescaderia.probandopescaderia.controllers.RegisterController">
+<Pane fx:id="registroPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.pescaderia.probandopescaderia.RegisterController">
    <children>
       <TextField fx:id="txtUsuarioRegistro" layoutX="454.0" layoutY="213.0" />
       <Button fx:id="btnRegistrar" layoutX="484.0" layoutY="314.0" mnemonicParsing="false" text="REGISTRARSE" />

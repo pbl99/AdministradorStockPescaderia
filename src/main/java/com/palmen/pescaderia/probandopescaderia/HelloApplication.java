@@ -10,9 +10,9 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StockPescaderia.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("RegistroPescaderia.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(), 747, 365);
-        Scene scene = new Scene(fxmlLoader.load(), 950, 600);
+        Scene scene = new Scene(fxmlLoader.load());
         // Este scene para aproximar tamaño de la vista StockPescaderia
 
         stage.setTitle("Administador Stock Pescaderia");
