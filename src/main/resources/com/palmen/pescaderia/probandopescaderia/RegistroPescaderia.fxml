@@ -52,5 +52,18 @@
          </font>
       </Label>
       <Label fx:id="lblHaciaLogin" layoutX="454.0" layoutY="83.0" prefHeight="17.0" prefWidth="149.0" style="-fx-underline: true;" text="Ya tienes cuenta? Click aquí" />
+      <Label fx:id="lblErrorCorreo" layoutX="519.0" layoutY="122.0" prefHeight="17.0" prefWidth="168.0" textFill="RED" />
+      <Label fx:id="lblErrorUsuario" layoutX="519.0" layoutY="190.0" prefHeight="17.0" prefWidth="168.0" textFill="RED" />
+      <Label fx:id="lblErrorContraseña" layoutX="548.0" layoutY="252.0" prefHeight="17.0" prefWidth="168.0" textFill="RED" />
+      <Label fx:id="lblRegistroExitoso" layoutX="454.0" layoutY="342.0" prefHeight="20.0" prefWidth="211.0" textFill="GREEN">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegistroFallido" layoutX="454.0" layoutY="342.0" prefHeight="20.0" prefWidth="211.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

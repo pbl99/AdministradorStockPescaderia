@@ -1,5 +1,6 @@
 package com.palmen.pescaderia.probandopescaderia;
 
+import com.palmen.pescaderia.probandopescaderia.models.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -44,13 +45,20 @@ public class LoginController {
     @FXML
     private TextField txtUsuario;
 
+    @FXML
+    private Label lblDatosIncorrectos;
+
 
     public void loginUsuario() {
+        UsuarioDAO usuarioDao = new UsuarioDAO();
         btnConectar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                // Agrega aquí el código que deseas ejecutar al hacer clic en el botón
-                if (txtUsuario.getText().equals("root") && txtContraseña.getText().equals("admin")) {
+                String usuario = txtUsuario.getText();
+                String contraseña = txtContraseña.getText();
+                // Se comprobaria al usuario en BD por usuario y clave
+                if (usuarioDao.verificarCredenciales(usuario, contraseña)) {
+                    // Usuario y contraseña válidos
                     System.out.println("El usuario y la contraseña son correctos");
                     try {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("StockPescaderia.fxml"));
@@ -58,6 +66,11 @@ public class LoginController {
 
                         Stage stageOld = (Stage) btnConectar.getScene().getWindow();
                         stageOld.close();
+
+                        // Obtenemos el controlador de la escena cargada
+                        StockController controller = loader.getController();
+                        // Llamamos al método público del controlador para establecer el texto de bienvenida del Label
+                        controller.usuarioConectado(usuario);
 
                         Stage stage = new Stage();
                         stage.setTitle("Administador Stock Pescaderia");
@@ -70,6 +83,7 @@ public class LoginController {
 
                 } else {
                     System.out.println("Los datos no son correctos");
+                    lblDatosIncorrectos.setText("Los datos no son correctos");
                 }
             }
         });

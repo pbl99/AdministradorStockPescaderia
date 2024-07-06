@@ -16,6 +16,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegisterController {
 
@@ -55,6 +57,21 @@ public class RegisterController {
     @FXML
     private TextField txtUsuarioRegistro;
 
+    @FXML
+    private Label lblErrorCorreo;
+
+    @FXML
+    private Label lblErrorUsuario;
+
+    @FXML
+    private Label lblErrorContraseña;
+
+    @FXML
+    private Label lblRegistroExitoso;
+
+    @FXML
+    private Label lblRegistroFallido;
+
     public void registerUsuario() {
         btnRegistrar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -63,9 +80,47 @@ public class RegisterController {
                 String usuario = txtUsuarioRegistro.getText();
                 String clave = txtContraseñaRegistro.getText();
 
-                UsuarioDAO.crearUsuario(correo, usuario, clave);
+                verificarCampos(correo, usuario, clave);
             }
         });
+    }
+
+    public void verificarCampos(String correo, String usuario, String clave) {
+        Pattern pattern = Pattern.compile("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
+
+        Matcher matcher = pattern.matcher(correo);
+
+        if (correo.isEmpty()) {
+            lblErrorCorreo.setText("El campo no puede estar vacío");
+        } else if (!matcher.matches()) {
+            lblErrorCorreo.setText("El email debe tener un formato válido");
+        } else {
+            lblErrorCorreo.setText("");
+        }
+
+        if (usuario.isEmpty()) {
+            lblErrorUsuario.setText("El campo no puede estar vacío");
+        } else {
+            lblErrorUsuario.setText("");
+        }
+
+        if (clave.isEmpty()) {
+            lblErrorContraseña.setText("El campo no puede estar vacío");
+        } else {
+            lblErrorContraseña.setText("");
+        }
+
+        if (lblErrorCorreo.getText().isEmpty() && lblErrorUsuario.getText().isEmpty() && lblErrorContraseña.getText().isEmpty()) {
+            if (!UsuarioDAO.existeUsuario(correo)) {
+                UsuarioDAO.crearUsuario(correo, usuario, clave);
+                lblRegistroExitoso.setText("El registro ha sido exitoso");
+                lblRegistroFallido.setText("");
+            } else {
+                lblRegistroExitoso.setText("");
+                lblRegistroFallido.setText("El email ya está en uso");
+            }
+        }
     }
 
     public void lblHaciaLoginAction() {
