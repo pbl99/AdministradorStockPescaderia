@@ -3,11 +3,11 @@
 Aplicación para administar el stock de una pescadería
 
 
-![Captura de pantalla del registro](src/main/resources/com/palmen/pescaderia/probandopescaderia/img/registro.png)
-
-![Captura de pantalla del login](src/main/resources/com/palmen/pescaderia/probandopescaderia/img/login.png)
-
-![Captura de pantalla de la aplicación](src/main/resources/com/palmen/pescaderia/probandopescaderia/img/main.png)
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <img src="src/main/resources/com/palmen/pescaderia/probandopescaderia/img/registro.png" alt="Imagen 1" style="width: 350px;">
+    <img src="src/main/resources/com/palmen/pescaderia/probandopescaderia/img/login.png" alt="Imagen 2" style="width: 350px;">
+</div>
+  <img src="src/main/resources/com/palmen/pescaderia/probandopescaderia/img/main.png" alt="Imagen 3" style="width: 500px;">
 
 ## Descripción
 
