@@ -14,7 +14,7 @@
             <children>
                 <ImageView fx:id="imgUsuarioLogo" fitHeight="98.0" fitWidth="123.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../img/iconoUsuario.png" />
+                        <Image url="@img/iconoUsuario.png" />
                     </image>
                 </ImageView>
                 <Label fx:id="lblUsuarioLogo" layoutX="54.0" layoutY="112.0" prefHeight="17.0" prefWidth="114.0" text="Nombre de usuario" />
@@ -43,66 +43,64 @@
         <Label fx:id="lblTrucha" layoutX="822.0" layoutY="435.0" text="TRUCHA" />
         <ImageView fx:id="imgBacalao" fitHeight="143.0" fitWidth="174.0" layoutX="216.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/bacalao.png" />
+                <Image url="@img/bacalao.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgBoqueron" fitHeight="114.0" fitWidth="168.0" layoutX="406.0" layoutY="122.0">
             <image>
-                <Image url="@../../../../img/boqueron.png" />
+                <Image url="@img/boqueron.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgDorada" fitHeight="108.0" fitWidth="168.0" layoutX="584.0" layoutY="125.0">
             <image>
-                <Image url="@../../../../img/dorada.png" />
+                <Image url="@img/dorada.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgGamba" fitHeight="150.0" fitWidth="200.0" layoutX="752.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/gamba.png" />
+                <Image url="@img/gamba.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgLenguado" fitHeight="114.0" fitWidth="174.0" layoutX="226.0" layoutY="275.0">
             <image>
-                <Image url="@../../../../img/lenguado.png" />
+                <Image url="@img/lenguado.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgLubina" fitHeight="98.0" fitWidth="184.0" layoutX="400.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/lubina.png" />
+                <Image url="@img/lubina.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgMerluza" fitHeight="133.0" fitWidth="191.0" layoutX="588.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/merluza.png" />
+                <Image url="@img/merluza.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgPulpo" fitHeight="150.0" fitWidth="200.0" layoutX="745.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/pulpo.png" />
+                <Image url="@img/pulpo.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgSalmon" fitHeight="123.0" fitWidth="174.0" layoutX="226.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/salmon.png" />
+                <Image url="@img/salmon.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgSardina" fitHeight="122.0" fitWidth="174.0" layoutX="405.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/sardina.png" />
+                <Image url="@img/sardina.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgSepia" fitHeight="123.0" fitWidth="168.0" layoutX="584.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/sepia.png" />
+                <Image url="@img/sepia.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imgTrucha" fitHeight="112.0" fitWidth="174.0" layoutX="762.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../img/trucha.png" />
+                <Image url="@img/trucha.png" />
             </image>
         </ImageView>
-        <Label layoutX="571.0" layoutY="574.0" text="1" />
-        <Label layoutX="581.0" layoutY="574.0" text="2" />
         <Label fx:id="lblMensajeError" alignment="CENTER" layoutX="336.0" layoutY="31.0" prefHeight="17.0" prefWidth="496.0" textFill="#f40a0a">
             <font>
                 <Font size="14.0" />

@@ -12,6 +12,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
+import java.util.Objects;
+
 public class StockController {
 
     @FXML
@@ -139,24 +141,25 @@ public class StockController {
 
     private void mostrarInfoPescado(String info, String imagen, String descripcion, String pescado) {
         lblInfoPescado.setText(info);
-        imgInfoPescado.setImage(new Image(imagen));
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagen)));
+        imgInfoPescado.setImage(image);
         lblInfoDescripcion.setText(descripcion);
         pescadoActual = pescado;
     }
 
     private void configurarInfoPescado() {
-        imgBacalao.setOnMouseClicked(e -> mostrarInfoPescado("INFO BACALAO", "bacalao.png", "Bacalaos traídos principalmente del mar cantábrico, Hay un stock de " + StockDAO.obtenerStockActual("BACALAO"), "BACALAO"));
-        imgBoqueron.setOnMouseClicked(e -> mostrarInfoPescado("INFO BOQUERON", "boqueron.png", "Boquerones traídos principalmente de las costas andaluzas, Hay un stock de " + StockDAO.obtenerStockActual("BOQUERON"), "BOQUERON"));
-        imgDorada.setOnMouseClicked(e -> mostrarInfoPescado("INFO DORADA", "dorada.png", "Doradas traídas principalmente del mar cantábrico, Hay un stock de " + StockDAO.obtenerStockActual("DORADA"), "DORADA"));
-        imgGamba.setOnMouseClicked(e -> mostrarInfoPescado("INFO GAMBA", "gamba.png", "Gambas traídas principalmente de las costas gallegas, Hay un stock de " + StockDAO.obtenerStockActual("GAMBA"), "GAMBA"));
-        imgLenguado.setOnMouseClicked(e -> mostrarInfoPescado("INFO LENGUADO", "lenguado.png", "Lenguados traídos principalmente del mar mediterráneo, Hay un stock de " + StockDAO.obtenerStockActual("LENGUADO"), "LENGUADO"));
-        imgLubina.setOnMouseClicked(e -> mostrarInfoPescado("INFO LUBINA", "lubina.png", "Lubinas traídas principalmente de las costas francesas, Hay un stock de " + StockDAO.obtenerStockActual("LUBINA"), "LUBINA"));
-        imgMerluza.setOnMouseClicked(e -> mostrarInfoPescado("INFO MERLUZA", "merluza.png", "Merluzas traídas principalmente del océano atlántico, Hay un stock de " + StockDAO.obtenerStockActual("MERLUZA"), "MERLUZA"));
-        imgPulpo.setOnMouseClicked(e -> mostrarInfoPescado("INFO PULPO", "pulpo.png", "Pulpos traídos principalmente de las costas gallegas, Hay un stock de " + StockDAO.obtenerStockActual("PULPO"), "PULPO"));
-        imgSalmon.setOnMouseClicked(e -> mostrarInfoPescado("INFO SALMON", "salmon.png", "Salmones traídos principalmente de las costas noruegas, Hay un stock de " + StockDAO.obtenerStockActual("SALMON"), "SALMON"));
-        imgSardina.setOnMouseClicked(e -> mostrarInfoPescado("INFO SARDINA", "sardina.png", "Sardinas traídas principalmente del mar cantábrico, Hay un stock de " + StockDAO.obtenerStockActual("SARDINA"), "SARDINA"));
-        imgSepia.setOnMouseClicked(e -> mostrarInfoPescado("INFO SEPIA", "sepia.png", "Sepias traídas principalmente de piscifactorías, Hay un stock de " + StockDAO.obtenerStockActual("SEPIA"), "SEPIA"));
-        imgTrucha.setOnMouseClicked(e -> mostrarInfoPescado("INFO TRUCHA", "trucha.png", "Truchas traídas principalmente de los ríos españoles, Hay un stock de " + StockDAO.obtenerStockActual("TRUCHA"), "TRUCHA"));
+        imgBacalao.setOnMouseClicked(e -> mostrarInfoPescado("INFO BACALAO", "/com/palmen/pescaderia/probandopescaderia/img/bacalao.png", "Bacalaos traídos principalmente del mar cantábrico, Hay un stock de " + StockDAO.obtenerStockActual("BACALAO"), "BACALAO"));
+        imgBoqueron.setOnMouseClicked(e -> mostrarInfoPescado("INFO BOQUERON", "/com/palmen/pescaderia/probandopescaderia/img/boqueron.png", "Boquerones traídos principalmente de las costas andaluzas, Hay un stock de " + StockDAO.obtenerStockActual("BOQUERON"), "BOQUERON"));
+        imgDorada.setOnMouseClicked(e -> mostrarInfoPescado("INFO DORADA", "/com/palmen/pescaderia/probandopescaderia/img/dorada.png", "Doradas traídas principalmente del mar cantábrico, Hay un stock de " + StockDAO.obtenerStockActual("DORADA"), "DORADA"));
+        imgGamba.setOnMouseClicked(e -> mostrarInfoPescado("INFO GAMBA", "/com/palmen/pescaderia/probandopescaderia/img/gamba.png", "Gambas traídas principalmente de las costas gallegas, Hay un stock de " + StockDAO.obtenerStockActual("GAMBA"), "GAMBA"));
+        imgLenguado.setOnMouseClicked(e -> mostrarInfoPescado("INFO LENGUADO", "/com/palmen/pescaderia/probandopescaderia/img/lenguado.png", "Lenguados traídos principalmente del mar mediterráneo, Hay un stock de " + StockDAO.obtenerStockActual("LENGUADO"), "LENGUADO"));
+        imgLubina.setOnMouseClicked(e -> mostrarInfoPescado("INFO LUBINA", "/com/palmen/pescaderia/probandopescaderia/img/lubina.png", "Lubinas traídas principalmente de las costas francesas, Hay un stock de " + StockDAO.obtenerStockActual("LUBINA"), "LUBINA"));
+        imgMerluza.setOnMouseClicked(e -> mostrarInfoPescado("INFO MERLUZA", "/com/palmen/pescaderia/probandopescaderia/img/merluza.png", "Merluzas traídas principalmente del océano atlántico, Hay un stock de " + StockDAO.obtenerStockActual("MERLUZA"), "MERLUZA"));
+        imgPulpo.setOnMouseClicked(e -> mostrarInfoPescado("INFO PULPO", "/com/palmen/pescaderia/probandopescaderia/img/pulpo.png", "Pulpos traídos principalmente de las costas gallegas, Hay un stock de " + StockDAO.obtenerStockActual("PULPO"), "PULPO"));
+        imgSalmon.setOnMouseClicked(e -> mostrarInfoPescado("INFO SALMON", "/com/palmen/pescaderia/probandopescaderia/img/salmon.png", "Salmones traídos principalmente de las costas noruegas, Hay un stock de " + StockDAO.obtenerStockActual("SALMON"), "SALMON"));
+        imgSardina.setOnMouseClicked(e -> mostrarInfoPescado("INFO SARDINA", "/com/palmen/pescaderia/probandopescaderia/img/sardina.png", "Sardinas traídas principalmente del mar cantábrico, Hay un stock de " + StockDAO.obtenerStockActual("SARDINA"), "SARDINA"));
+        imgSepia.setOnMouseClicked(e -> mostrarInfoPescado("INFO SEPIA", "/com/palmen/pescaderia/probandopescaderia/img/sepia.png", "Sepias traídas principalmente de piscifactorías, Hay un stock de " + StockDAO.obtenerStockActual("SEPIA"), "SEPIA"));
+        imgTrucha.setOnMouseClicked(e -> mostrarInfoPescado("INFO TRUCHA", "/com/palmen/pescaderia/probandopescaderia/img/trucha.png", "Truchas traídas principalmente de los ríos españoles, Hay un stock de " + StockDAO.obtenerStockActual("TRUCHA"), "TRUCHA"));
     }
 
 
@@ -166,7 +169,16 @@ public class StockController {
             if (spinnerAñadir.getValue() > 0 && spinnerEliminar.getValue() == 0) {
                 StockDAO.actualizarStock(pescadoActual, spinnerAñadir.getValue());
             } else if (spinnerEliminar.getValue() < 0 && spinnerAñadir.getValue() == 0) {
-                StockDAO.actualizarStock(pescadoActual, spinnerEliminar.getValue());
+                int calculoFinal = StockDAO.obtenerStockActual(pescadoActual) + spinnerEliminar.getValue();
+                if (calculoFinal < 0) {
+                    FadeTransition fadeTransition = new FadeTransition(Duration.seconds(4), lblMensajeError);
+                    fadeTransition.setFromValue(1.0);
+                    fadeTransition.setToValue(0.0);
+                    lblMensajeError.setText("El stock no puede ser negativo");
+                    fadeTransition.play();
+                } else {
+                    StockDAO.actualizarStock(pescadoActual, spinnerEliminar.getValue());
+                }
             } else {
                 // Crear la animación de desvanecimiento
                 FadeTransition fadeTransition = new FadeTransition(Duration.seconds(4), lblMensajeError);
