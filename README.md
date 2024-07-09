@@ -2,6 +2,13 @@
 
 Aplicación para administar el stock de una pescadería
 
+
+![Captura de pantalla del registro](src/main/resources/com/palmen/pescaderia/probandopescaderia/img/registro.png)
+
+![Captura de pantalla del login](src/main/resources/com/palmen/pescaderia/probandopescaderia/img/login.png)
+
+![Captura de pantalla de la aplicación](src/main/resources/com/palmen/pescaderia/probandopescaderia/img/main.png)
+
 ## Descripción
 
 AdministradorStockPescaderia es una aplicación para la gestión de stocks de una pescaderia. También incluye funcionalidad básica de autenticación y gestión de sesiones de usuarios.
@@ -48,6 +55,9 @@ AdministradorStockPescaderia es una aplicación para la gestión de stocks de un
 
 Por defecto, la aplicación usa una base de datos MySql. Puedes cambiar la configuración de la base de datos en el archivo `StockDAO` y `UsuarioDAO` ubicado en `src/main/java/com/palmen/pescaderia/probandopescaderia/models`.
 
+**Crear la Base de Datos**:
+   - Abre tu cliente de MySQL (puede ser la línea de comandos, MySQL Workbench, y importa el archivo que esta en resources import.sql)
+     
 Ejemplo de configuración para MySQL:
 
 ```properties
